@@ -23,14 +23,14 @@
 <meta http-equiv="Expires" content="0">
 <!-- ?v= у стилей и скриптов: после правок меняйте номер, чтобы браузер
      не подсунул старую версию и вёрстка не «ломалась» наполовину -->
-<link rel="stylesheet" href="assets/css/fonts.css?v=19">
-<link rel="stylesheet" href="assets/css/style.css?v=19">
+<link rel="stylesheet" href="assets/css/fonts.css?v=20">
+<link rel="stylesheet" href="assets/css/style.css?v=20">
 <script>
 /* Страховка от кэша: если браузер подсунул старый style.css, метка версии
    в нём не совпадёт с ожидаемой — тогда дотягиваем свежий файл.
    При смене ?v= меняйте и это число, и --css-version в style.css. */
 (function () {
-  var want = '19';
+  var want = '20';
   function check() {
     var got = getComputedStyle(document.documentElement)
       .getPropertyValue('--css-version').trim().replace(/["']/g, '');
@@ -584,6 +584,6 @@
 
 <script src="assets/js/vendor/gsap.min.js"></script>
 <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js?v=19"></script>
+<script src="assets/js/main.js?v=20"></script>
 </body>
 </html>

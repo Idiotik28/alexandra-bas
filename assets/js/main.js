@@ -420,7 +420,7 @@
             render();
             renderSlots();
             updateWizChrome();
-            goToStep(2);           // сразу к выбору времени
+            goToStep(3);           // календарь — шаг 2, время — шаг 3
           };
         })(date));
 
