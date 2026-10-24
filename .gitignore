@@ -1,0 +1,12 @@
+# системное
+.DS_Store
+
+# рабочие материалы, на сайт не нужны
+docs/screenshots/
+.playwright-mcp/
+
+# шрифты-кандидаты и страницы сравнения — инструмент разработки,
+# пересобираются скриптом scripts/getpreview.py
+assets/fonts-preview/
+fonts.html
+fonts-d.html
