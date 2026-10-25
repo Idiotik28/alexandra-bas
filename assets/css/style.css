@@ -8,7 +8,7 @@
 :root {
   /* метка версии стилей — по ней index.html проверяет, не подсунул ли
      браузер старый кэш. Меняется вместе с ?v= в ссылках. */
-  --css-version: "21";
+  --css-version: "23";
 
   /* палитра */
   --cream:      #FBF6F3;   /* основной фон */
@@ -992,13 +992,26 @@ p { margin: 0; }
   }
   .hero__text { color: var(--ink); }
 
-  /* карточки были во весь экран — ужимаем до нормального размера */
-  .minicard { padding: 12px 14px; gap: 12px; }
+  /* карточки были во весь экран — сжимаем по содержимому, а не по ширине экрана */
+  .hero__cards { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .minicard {
+    flex: 0 0 auto; width: auto;
+    padding: 12px 14px; gap: 12px;
+  }
   .minicard__name { font-size: 15px; }
   .minicard__note { font-size: 12px; }
   .minicard__arrow { width: 32px; height: 32px; }
   .minicard__arrow svg { width: 15px; height: 15px; }
-  .hero__cards { gap: 10px; }
+  .worksbtn { justify-self: start; }
+
+  /* Полоса шагов не умеет сжиматься и растягивала карточку за край экрана.
+     Разрешаем ей переноситься и снимаем минимальную ширину у колонки. */
+  .booking__grid > * { min-width: 0; }
+  .wiz { min-width: 0; }
+  /* без соединительных чёрточек все четыре шага встают в одну строку */
+  .wiz__steps { flex-wrap: wrap; row-gap: 8px; gap: 8px; }
+  .wiz__step + .wiz__step::before { display: none; }
+  .wiz__num { width: 24px; height: 24px; font-size: 12px; }
 
   .wiz__actions { grid-template-columns: 1fr; }
   .wiz { padding: var(--sp-2); }
