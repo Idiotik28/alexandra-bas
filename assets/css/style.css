@@ -8,7 +8,7 @@
 :root {
   /* метка версии стилей — по ней index.html проверяет, не подсунул ли
      браузер старый кэш. Меняется вместе с ?v= в ссылках. */
-  --css-version: "20";
+  --css-version: "21";
 
   /* палитра */
   --cream:      #FBF6F3;   /* основной фон */
@@ -981,6 +981,25 @@ p { margin: 0; }
   .work, .work--tall { aspect-ratio: 4 / 5; }
   .gal__grid { grid-template-columns: repeat(2, 1fr); }
   .gal__bar, .gal__scroll { width: min(100% - 32px, var(--wrap)); }
+  /* На телефоне текст героя лежит прямо на фото: горизонтальная подложка
+     его не накрывает, поэтому меняем её на вертикальную и делаем текст тёмным. */
+  .hero__scrim {
+    background: linear-gradient(180deg,
+      rgba(251, 246, 243, .92) 0%,
+      rgba(251, 246, 243, .74) 38%,
+      rgba(251, 246, 243, .28) 64%,
+      transparent 100%);
+  }
+  .hero__text { color: var(--ink); }
+
+  /* карточки были во весь экран — ужимаем до нормального размера */
+  .minicard { padding: 12px 14px; gap: 12px; }
+  .minicard__name { font-size: 15px; }
+  .minicard__note { font-size: 12px; }
+  .minicard__arrow { width: 32px; height: 32px; }
+  .minicard__arrow svg { width: 15px; height: 15px; }
+  .hero__cards { gap: 10px; }
+
   .wiz__actions { grid-template-columns: 1fr; }
   .wiz { padding: var(--sp-2); }
   .wiz__steps { gap: 6px; font-size: 13px; }
