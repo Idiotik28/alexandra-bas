@@ -8,10 +8,9 @@
 <meta property="og:title" content="Александра Бас — наращивание волос">
 <meta property="og:description" content="Капсульное наращивание, коррекция и уход. Запись онлайн.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/og.jpg">
-<!-- Черновик на согласовании: прячем от поисковиков.
-     Перед реальным запуском эту строку удалить. -->
-<meta name="robots" content="noindex, nofollow">
+<meta property="og:image" content="https://alexandrabas.ru/assets/img/og.jpg">
+<meta property="og:url" content="https://alexandrabas.ru/">
+<link rel="canonical" href="https://alexandrabas.ru/">
 <link rel="icon" href="assets/img/logo-dark.png">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/onest-400-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/onest-600-cyrillic.woff2" crossorigin>
@@ -23,14 +22,14 @@
 <meta http-equiv="Expires" content="0">
 <!-- ?v= у стилей и скриптов: после правок меняйте номер, чтобы браузер
      не подсунул старую версию и вёрстка не «ломалась» наполовину -->
-<link rel="stylesheet" href="assets/css/fonts.css?v=25">
-<link rel="stylesheet" href="assets/css/style.css?v=25">
+<link rel="stylesheet" href="assets/css/fonts.css?v=26">
+<link rel="stylesheet" href="assets/css/style.css?v=26">
 <script>
 /* Страховка от кэша: если браузер подсунул старый style.css, метка версии
    в нём не совпадёт с ожидаемой — тогда дотягиваем свежий файл.
    При смене ?v= меняйте и это число, и --css-version в style.css. */
 (function () {
-  var want = '25';
+  var want = '26';
   function check() {
     var got = getComputedStyle(document.documentElement)
       .getPropertyValue('--css-version').trim().replace(/["']/g, '');
@@ -594,6 +593,6 @@
 
 <script src="assets/js/vendor/gsap.min.js"></script>
 <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js?v=25"></script>
+<script src="assets/js/main.js?v=26"></script>
 </body>
 </html>
