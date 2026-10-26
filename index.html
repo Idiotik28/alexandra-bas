@@ -23,14 +23,14 @@
 <meta http-equiv="Expires" content="0">
 <!-- ?v= у стилей и скриптов: после правок меняйте номер, чтобы браузер
      не подсунул старую версию и вёрстка не «ломалась» наполовину -->
-<link rel="stylesheet" href="assets/css/fonts.css?v=23">
-<link rel="stylesheet" href="assets/css/style.css?v=23">
+<link rel="stylesheet" href="assets/css/fonts.css?v=25">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
 <script>
 /* Страховка от кэша: если браузер подсунул старый style.css, метка версии
    в нём не совпадёт с ожидаемой — тогда дотягиваем свежий файл.
    При смене ?v= меняйте и это число, и --css-version в style.css. */
 (function () {
-  var want = '23';
+  var want = '25';
   function check() {
     var got = getComputedStyle(document.documentElement)
       .getPropertyValue('--css-version').trim().replace(/["']/g, '');
@@ -558,14 +558,21 @@
       <div class="socials">
         <a href="https://t.me/+79775891893" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 4L3 11l5 2 2 6 3-4 5 4z"/></svg></a>
         <a href="https://wa.me/79775891893" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="17" cy="7" r="1"/></svg></a>
-        <a href="#" aria-label="VK"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3.5 8h3c.4 3.2 1.8 5 2.8 5.4V8h2.8v4.3c1-.3 2.2-1.9 2.6-4.3h2.8c-.4 2.6-1.8 4.4-2.8 5.1 1 .6 2.6 2.2 3.3 4.9h-3.1c-.5-1.7-1.6-3-2.8-3.3V18H9.4C6 18 4 15.2 3.5 8z"/></svg></a>
+        <a href="https://www.instagram.com/hair_power.msk" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="17" cy="7" r="1"/></svg></a>
+        <!-- ссылки на VK пока нет: это не ссылка, а заглушка, чтобы не вела в никуда -->
+        <span class="socials__soon" aria-label="ВКонтакте — скоро" title="Скоро"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3.5 8h3c.4 3.2 1.8 5 2.8 5.4V8h2.8v4.3c1-.3 2.2-1.9 2.6-4.3h2.8c-.4 2.6-1.8 4.4-2.8 5.1 1 .6 2.6 2.2 3.3 4.9h-3.1c-.5-1.7-1.6-3-2.8-3.3V18H9.4C6 18 4 15.2 3.5 8z"/></svg></span>
       </div>
     </div>
 
     <div class="ftr__brand">
       <img src="assets/img/logo-light.png" alt="Александра Бас" class="ftr__logo" width="320" height="107">
       <a href="#booking" class="btn btn--light">Записаться на консультацию</a>
+
+      <p class="ftr__hours">
+        Будние дни 10:00 — 21:00<br>
+        Суббота 11:00 — 20:00<br>
+        Воскресенье — выходной
+      </p>
 
       <h3 class="ftr__title ftr__title--sub">Рассылка об уходе</h3>
       <form class="sub" id="subform" novalidate>
@@ -587,6 +594,6 @@
 
 <script src="assets/js/vendor/gsap.min.js"></script>
 <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js?v=23"></script>
+<script src="assets/js/main.js?v=25"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 :root {
   /* метка версии стилей — по ней index.html проверяет, не подсунул ли
      браузер старый кэш. Меняется вместе с ?v= в ссылках. */
-  --css-version: "23";
+  --css-version: "25";
 
   /* палитра */
   --cream:      #FBF6F3;   /* основной фон */
@@ -892,7 +892,8 @@ p { margin: 0; }
 .ftr__addr { margin-top: var(--sp-2); display: block; }
 
 .socials { display: flex; gap: 14px; margin-top: var(--sp-4); }
-.socials a {
+.socials a,
+.socials__soon {
   display: inline-flex; align-items: center; justify-content: center;
   width: 44px; height: 44px; border-radius: 50%;
   color: rgba(251, 246, 243, .75);
@@ -900,8 +901,11 @@ p { margin: 0; }
   transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .socials a:hover { color: #fff; border-color: rgba(251, 246, 243, .5); }
+/* заглушка без ссылки — приглушена, чтобы не выглядела рабочей */
+.socials__soon { color: rgba(251, 246, 243, .4); cursor: default; }
 
 .ftr__brand { justify-self: end; display: grid; justify-items: end; gap: var(--sp-3); text-align: right; }
+.ftr__hours { font-size: 14px; line-height: 1.8; color: rgba(251, 246, 243, .72); }
 .ftr__logo { width: auto; height: clamp(34px, 3.4vw, 46px); object-fit: contain; }
 
 .sub { display: flex; align-items: center; gap: 8px; width: min(320px, 100%); padding: 6px 6px 6px 20px;

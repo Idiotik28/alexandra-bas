@@ -473,6 +473,7 @@
      5. ПОДПИСКА В ФУТЕРЕ
   --------------------------------------------------------- */
 
+
   function initSubForm() {
     var form = document.getElementById('subform');
     var status = document.getElementById('subStatus');
